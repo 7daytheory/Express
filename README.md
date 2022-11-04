@@ -1,5 +1,7 @@
 # Express
 <p>
-Dependencies: npm install express --save <br />
-(global)npm install -g nodemon (auto refreshes server)
+Dependencies:
+express --save <br />
+(global)nodemon (auto refreshes server)<br />
+body-parser <br />
 </p>
