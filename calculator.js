@@ -20,6 +20,23 @@ app.post('/', (req, res) => {
   res.send('Thanks for posting! <br /> The result of your calculator is ' + result);
 })
 
+// *********** BMI 'challenge' **********//
+app.get("/bmicalculator", (req, res) => {
+  res.sendFile(__dirname + '/bmiCalculator.html');
+})
+
+//Add URL - use this url as "action" in form
+app.post("/bmicalculator", (req, res) => {
+  let weight = parseFloat(req.body.weight);
+  let height = parseFloat(req.body.height);
+
+  let bmi = weight / (height * height);
+
+  res.send('Your BMI is ' + bmi);
+})
+
+//**** BMI Challenge end ********* //
+
 app.listen(port, () => {
   console.log(`Listening on ${port}`)
 })
